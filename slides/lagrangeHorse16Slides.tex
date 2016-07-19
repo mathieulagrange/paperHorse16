@@ -1,0 +1,125 @@
+\documentclass[compress]{beamer}
+\usepackage{euscript,amsmath,amssymb,amsfonts,amsthm,epsfig,subfigure,color,graphicx}
+\usepackage[latin1]{inputenc}
+%\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\setcounter{page}{1}
+\usepackage{pgf}
+\usepackage{tikz}
+\newsavebox{\mysavebox}
+%\usepackage[autolinebreaks,useliterate]{mcode}
+\usetikzlibrary{arrows,positioning}
+\usepackage{letltxmacro}
+\LetLtxMacro\olditemize\itemize
+\LetLtxMacro\oldenumerate\enumerate
+
+\usepackage{beamerthemedefault, multimedia, wasysym, amssymb, kpfonts}
+
+\useoutertheme{smoothbars}
+\useinnertheme[shadow=true]{rounded}
+\setbeamercovered{transparent}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{itemize items}{$\multimapdotinv$}
+\setbeamertemplate{itemize items}{\textbf{$\strictfi$}}
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{section in toc}[circle]
+%\useoutertheme{infolines}
+\definecolor{myColor}{HTML}{E9CFEC}
+\setbeamercolor{block title}{bg=green}
+
+\definecolor{violet}{rgb}{0.8, 0.6, 0.8}
+\definecolor{green}{rgb}{0.8 ,.9, 0.8}
+\definecolor{blue}{rgb}{0.3, 0 ,0.6}
+
+\newcommand{\includesound}[1]{
+\movie[]%
+{\structure{\includegraphics[keepaspectratio,width=.5cm]{figures/play}}}{#1}}
+
+% footnote without numbers
+\let\oldfootnote\footnote
+\renewcommand\footnote[1]{\let\thefootnote\relax%
+\oldfootnote{#1}}
+
+% title, url, authors, extensions
+\newcommand\citenote[4]{\footnote{#3 \href{#2}{\structure{#1}} #4}}
+
+%\usecolortheme[named=purple]{structure}
+
+\title[PDS]{\LARGE \bf Title}
+
+\subtitle{subtitle}
+
+\author{Mathieu Lagrange \includesound{sounds/roxanne_thePolice.wav} \citenote{http://www.irccyn.ec-nantes.fr/\~{}lagrange}{http://www.irccyn.ec-nantes.fr/~lagrange}{}{}}
+
+\institute[Irccyn]
+{
+\includegraphics[height=2.5cm]{figures/logoIrccyn}
+\includegraphics[height=2.5cm]{figures/logoEcn}
+\includegraphics[height=2.5cm]{figures/logoCnrs}
+}
+
+
+%\date[]{23 Avril 2009}
+
+\logo{\includegraphics[height=.8cm]{figures/logoCnrs}}
+
+
+
+\begin{document}
+% Update itemize to have a default overlay
+%\renewcommand{\itemize}[1][<+(1)->]{\olditemize[#1]}
+%\renewcommand{\enumerate}[1][<+(1)->]{\oldenumerate[#1]}
+
+%\includeonlyframes{current}
+
+\frame{\titlepage \thispagestyle{empty}}
+
+% show section lists
+\begin{frame}{Outline} \tableofcontents[pausesections] \end{frame} 
+ 
+
+\section{Blank}
+
+% show subsection list
+\begin{frame}{} \tableofcontents[currentsection] \end{frame} 
+
+
+
+
+
+\begin{frame}{Figure}
+\begin{center}
+\includegraphics[width=.6\columnwidth]{figures/play} \\
+\end{center}
+\end{frame}
+
+\begin{frame}{Block}
+\begin{block}{title}
+\begin{itemize}
+\item
+\item
+\item
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Itemize}
+\begin{itemize}
+\item
+\item
+\item
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Special}
+\structure{Hey}: ..
+\begin{itemize} 
+\item[+] 
+\item[--] 
+\end{itemize}
+\citenote{title}{http://www.google.com}{author}{infos}
+\end{frame}
+
+\end{document}

@@ -70,7 +70,7 @@
 
 \begin{document}
 % Update itemize to have a default overlay
-%\renewcommand{\itemize}[1][<+(1)->]{\olditemize[#1]}
+\renewcommand{\itemize}[1][<+(1)->]{\olditemize[#1]}
 %\renewcommand{\enumerate}[1][<+(1)->]{\oldenumerate[#1]}
 
 %\includeonlyframes{current}
@@ -88,35 +88,90 @@
 \begin{itemize}
 \item public horse
 \item hidden horses
-\item Potemkin Village
+\item Potemkin Villages
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Public horses for Source separation}
+\begin{block}{classic NMF Source Separation scheme}
+\begin{center}
+\includegraphics[width=.8\columnwidth]{figures/nmf}
 
-\begin{frame}{NMF-based Source separation}
-is an example of a "public" horse
+NMF is an iterative scheme, do you set the number of iterations for balancing computational cost and performance ?
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{Public horses for Source separation}
+\begin{center}
+\includegraphics[width=.8\columnwidth]{figures/early}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Public horses for Source separation}
+
+\begin{block}{
+the use of NMF is an example of a "public" horse}
 \begin{itemize}
 \item quality-of-fit optimized criterion
 \item target criteria (SDR, SAR, SIR)
-\item heavy use of early stop to ensure the non divergence of the target criteria
+\item heavy use of "early stop" to ensure the non divergence of the target criteria
 \end{itemize}
+\end{block}
 \end{frame}
+
 
 
 \begin{frame}{Why hidden horses}
+
+Digital data analysis is still in infancy (less than half a century), so uncontrolled behaviors are
 \begin{itemize}
-\item everyone is happy with it
-\item badly designed tasks
-\item too small and biased datasets
+\item part of research
+\item  and everyone is more or less happy with it
 \end{itemize}
 \end{frame}
 
-\begin{frame}{A Potemkin Village in Acoustic Scene Similarity Retrieval (ASSR)}
+\begin{frame}{Why hidden horses}
+
+That said, spurious correlations are a well known matters in MANY, MANY, MANY research fields and the fact that the engineering community put so few effort on addressing those matters is childish. 
+
+There are many ways our community is severely harming itself
 \begin{itemize}
-\item
-\item
-\item
+\item badly designed tasks
+\item too small and biased datasets
+\item unrealistic and non reproducible  results
 \end{itemize}
+
+\citenote{Warning Signs in Experimental Design and Interpretation}{http://norvig.com/experiment-design.html}{Peter Norvig:}{}
+\end{frame}
+
+\begin{frame}{An example}
+
+\begin{block}{Acoustic Scene Similarity Retrieval (ASSR)}
+\begin{center}
+\includegraphics[width=\columnwidth]{figures/assr} \\
+\end{center}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{An example}
+
+\begin{block}{A Potemkin Village in ASSR}
+
+\begin{itemize}
+\item 2007: near perfect results, solved case
+\item but strong issue in database design, similar to the album effect in artist / genre recognition
+\item 2015: new figure, GMMs useless and performance only slightly over chance
+\end{itemize}
+\end{block}
+
+
+\citenote{The bag-of-frames approach to audio pattern recognition: A sufficient model for urban soundscapes but not for polyphonic music}{https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=jnST06UAAAAJ&citation_for_view=jnST06UAAAAJ:UeHWp8X0CEIC}{J.J. Aucouturier \& al}{ The Journal of the Acoustical Society of America, 2007, vol. 122, no 2, p. 881-891}
+
+\citenote{The bag-of-frames approach: a not so sufficient model for urban soundscapes}{http://scitation.aip.org/content/asa/journal/jasa/138/5/10.1121/1.4935350}{M. Lagrange \& al}{The Journal of the Acoustical Society of America, 2015, 138(5), EL487 - EL492}
+
 \end{frame}
 
 \section{SimScene}

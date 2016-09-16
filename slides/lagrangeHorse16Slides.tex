@@ -48,23 +48,23 @@
 
 \title[PDS]{\LARGE \bf Computational experiments in Science}
 
-\subtitle{Horse wrangling in the digital age and Mathias Rossignol}
+\subtitle{Horse wrangling in the digital age}
 
-\author{Mathieu Lagrange \includesound{sounds/roxanne_thePolice.wav} \citenote{http://www.irccyn.ec-nantes.fr/\~{}lagrange}{http://www.irccyn.ec-nantes.fr/~lagrange}{}{}}
+\author{Mathieu Lagrange  and Mathias Rossignol \citenote{http://www.irccyn.ec-nantes.fr/\~{}lagrange}{http://www.irccyn.ec-nantes.fr/~lagrange}{}{}}
 
 \graphicspath{{./}{../}}
 
 \institute[Irccyn]
 {
-\includegraphics[height=1cm]{figures/logoIrccyn}\\
-\includegraphics[height=1.5cm]{figures/logoEcn}
-\includegraphics[height=1.5cm]{figures/logoCnrs}
+\includegraphics[height=.7cm]{figures/logoIrccyn}\\
+\includegraphics[height=1cm]{figures/logoEcn}
+\includegraphics[height=1cm]{figures/logoCnrs}
 }
 
 
 %\date[]{23 Avril 2009}
 
-\logo{\includegraphics[height=.8cm]{figures/logoCnrs}}
+\logo{\includegraphics[height=.6cm]{figures/logoCnrs}}
 
 
 
@@ -183,11 +183,39 @@ There are many ways our community is severely harming itself
 \end{frame}
 
 
+\begin{frame}{Audio Scene Analysis}
+\begin{center}
+\begin{block}{We need}
+\begin{itemize}
+\item lots of data
+\item well annotated data
+\item public domain data
+\item controllable complexity
+\end{itemize}
+\end{block}
+IMHO, simulated data is ok, as long as the aim is to gain knowledge and not to go to production.
+\end{center}
+\end{frame}
+
+\begin{frame}{Data simulation}
+\begin{center}
+\begin{block}{IMHO}
+\begin{itemize}
+\item simulated data is ok, 
+\item as long as the aim is to gain knowledge and not to go to production
+\item simulation is not real data, but also not synthesized data
+\item tricky part is to choose the right level of abstraction.
+\end{itemize}
+\end{block}
+\end{center}
+\end{frame}
+
 \begin{frame}{SimScene}
 \begin{center}
 \includegraphics[width=.6\columnwidth]{figures/simscene} \\
 \end{center}
 \end{frame}
+
 
 \begin{frame}{In a nutshell}
 \begin{block}{SimScene is an acoustic scene simulator}
@@ -210,8 +238,24 @@ There are many ways our community is severely harming itself
 \item used in DCASE 2013 and 2016 editions
 \item produced datasets on archive
 \end{itemize}
-\citenote{An evaluation framework for event detection using a morphological model of acoustic scenes}{http://arxiv.org/abs/1502.00141}{Mathieu Lagrange, Gr\'egoire Lafay, Mathias Rossignol, Emmanouil Benetos, Axel Roebel}{IEEE TASLP, in Press}
+\citenote{An evaluation framework for event detection using a morphological model of acoustic scenes}{http://arxiv.org/abs/1502.00141}{Mathieu Lagrange, Gr\'egoire Lafay, Mathias Rossignol, Emmanouil Benetos, Axel Roebel}{IEEE TASLP v24-10, 1854-1864}
 \end{frame}
+
+\begin{frame}{Going deeper in performance analysis}
+\begin{center}
+\includegraphics[width=.8\columnwidth]{../figures/ebr} \\
+Varying Event to Background Ratio (EBR)
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Going deeper in performance analysis}
+\begin{center}
+\includegraphics[width=.8\columnwidth]{../figures/irccyn} \\
+Changing recording location for events and background
+\end{center}
+\end{frame}
+
 
 \section{ExpLanes}
 
@@ -250,9 +294,9 @@ There are many ways our community is severely harming itself
 \begin{frame}{Conclusions}
 \begin{itemize}
 \item The horse phenomenon is a reality
-\item Potemkin village also
+\item Potemkin villages are very common also in emerging fields
 \item Scientists as individuals are smart humans
-\item The social impact is very strong
+\item Yet, the social impact is very strong
 \item As a community, the scientific method must be enforced
 \item Strict reproducible research is the way to go
 \item Need tools for that, not only languages
